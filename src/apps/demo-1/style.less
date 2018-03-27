@@ -1,0 +1,38 @@
+.cascader-picker {
+  position: relative;
+  display: inline-block;
+  padding: 4px 7px;
+  width: 200px;
+  height: 28px;
+  cursor: text;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  &:hover {
+    border-color: #4590ce;
+    cursor: pointer;
+  }
+  .drop-menus {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    li {
+      padding: 0 7px;
+      list-style: none;
+      line-height: 24px;
+      &+li {
+        border-top: 1px solid #eee;
+      }
+      &:hover, &.cur {
+        background-color: rgb(220, 239, 255);
+      }
+    }
+  }
+}
