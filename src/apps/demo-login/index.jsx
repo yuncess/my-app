@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const apiHost = 'http://localhost:3001';
+import { host } from '@/config/host';
 
 export default class DemoLogin extends Component {
   render() {
@@ -15,7 +15,7 @@ export default class DemoLogin extends Component {
     const data = { name: '小南瓜', age: '1.5' };
     $.ajax({
       type: 'POST',
-      url: `${apiHost}/add`,
+      url: `${host.apiHost}/add`,
       contentType: 'application/json;charset=utf-8',
       dataType: 'json',
       data: JSON.stringify(data),
