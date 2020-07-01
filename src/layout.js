@@ -8,7 +8,12 @@ export default class LayOut extends Component {
     return (
       <div>
         <div className='menu-bar'>
-          <Link to='/demo-1' className='cur'>级联选择</Link>
+          <Link to='/demo-1' className='cur'>
+            级联选择
+          </Link>
+          <Link to='/demo-login' className='cur'>
+            登录
+          </Link>
         </div>
         {this.props.children}
       </div>
