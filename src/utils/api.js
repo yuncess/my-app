@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import { host } from '@/config/host';
+import { host } from 'config/host';
 
 /**
  * 封装get请求
@@ -70,11 +70,10 @@ async function Fetch(
   //封装请求信息
   const request = {
     method: 'GET',
-    mode: 'no-cors', //跨域请求
+    mode: 'cors', //跨域请求
     headers: {
       'Content-Type': 'application/json',
-      'x-href': encodeURIComponent(window.location.href),
-      Authorization: 'window.token' || '',
+      Authorization: '',
     },
     ...init,
   };
@@ -89,7 +88,7 @@ async function Fetch(
     return {
       // 有时会返回0的结果
       res: ok ? result : data ? data : null,
-      err: ok ? null : new Error(message),
+      err: ok || !!data ? null : new Error(message),
       suggestion,
       code,
     };

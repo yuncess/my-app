@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "sourceMap": false,
+    "noImplicitAny": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "removeComments": false,
+    "paths": {
+      "utils": ["src/utils"],
+      "config/*": ["src/config/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
