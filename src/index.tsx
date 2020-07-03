@@ -4,8 +4,7 @@ import CascadeSelection from './apps/cascade-selection';
 import UserLogin from './apps/user-login';
 import UserDelete from './apps/user-delete';
 
-import './layout.less';
-import './reset.less';
+import './style/index.less';
 
 const routes = [
   {
