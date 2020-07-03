@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { host } from 'config/host';
 import { Api } from 'utils';
 
-export default class DemoLogin extends Component<any, any> {
+export default class UserLogin extends Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +34,7 @@ export default class DemoLogin extends Component<any, any> {
   onClick = async () => {
     const { name, psd } = this.state;
     const data = { name: name, psd: psd };
-    const { res, err } = await Api.post('/quary', data);
+    const { res, err } = await Api.post('/login', data);
     if (!!err) {
       alert(err.message);
     } else {
