@@ -11,7 +11,7 @@ export default class UserDelete extends Component<any, any> {
   render() {
     const { name } = this.state;
     return (
-      <div>
+      <div className='page'>
         <input
           placeholder='用户名'
           value={name}

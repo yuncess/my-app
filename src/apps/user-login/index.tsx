@@ -12,7 +12,7 @@ export default class UserLogin extends Component<any, any> {
   render() {
     const { name, psd } = this.state;
     return (
-      <div>
+      <div className='page'>
         <input
           placeholder='用户名'
           value={name}

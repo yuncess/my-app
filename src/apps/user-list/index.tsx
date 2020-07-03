@@ -13,7 +13,6 @@ export default class UserList extends Component<any, any> {
     if (!!err) {
       alert(err.message);
     } else {
-      alert('查询成功');
       this.setState({ userList: res });
     }
   }
@@ -21,7 +20,7 @@ export default class UserList extends Component<any, any> {
     const { userList } = this.state;
     console.log('userList:', userList);
     return (
-      <div>
+      <div className='page'>
         {userList.map((user) => (
           <p>
             <span>{user.name}</span>
